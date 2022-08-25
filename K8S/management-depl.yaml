@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: management-depl
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: managementservice
+  template:
+    metadata:
+      labels:
+        app: managementservice
+    spec:
+      containers:
+        - name: managementservice
+          image: leventtkaplan/managementservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: management-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: managementservice
+  ports:
+    - name: managementservice
+      protocol: TCP
+      port: 80
+      targetPort: 80      
+    - name: managementgrpc
+      protocol: TCP
+      port: 666
+      targetPort: 666

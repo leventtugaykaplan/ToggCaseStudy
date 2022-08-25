@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Management", "Management\Management.csproj", "{81955A69-7C3B-47D1-8D90-6E3C57B40253}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserPortal", "UserPortal\UserPortal.csproj", "{E8B57E3E-4071-4D33-8BF9-6EE12DD571CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8S", "K8S", "{F0B84A06-55BD-4D1A-A09E-2A2471A4986B}"
+	ProjectSection(SolutionItems) = preProject
+		K8S\local-pvc.yaml = K8S\local-pvc.yaml
+		K8S\management-depl.yaml = K8S\management-depl.yaml
+		K8S\mssql-plat-depl.yaml = K8S\mssql-plat-depl.yaml
+		K8S\rabbitmq-depl.yaml = K8S\rabbitmq-depl.yaml
+		K8S\userportal-depl.yaml = K8S\userportal-depl.yaml
+		K8S\userportal-np-srv.yaml = K8S\userportal-np-srv.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81955A69-7C3B-47D1-8D90-6E3C57B40253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81955A69-7C3B-47D1-8D90-6E3C57B40253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81955A69-7C3B-47D1-8D90-6E3C57B40253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81955A69-7C3B-47D1-8D90-6E3C57B40253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8B57E3E-4071-4D33-8BF9-6EE12DD571CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8B57E3E-4071-4D33-8BF9-6EE12DD571CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8B57E3E-4071-4D33-8BF9-6EE12DD571CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8B57E3E-4071-4D33-8BF9-6EE12DD571CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3148DFA-0F37-4145-8B9D-BC95D95B9A7F}
+	EndGlobalSection
+EndGlobal

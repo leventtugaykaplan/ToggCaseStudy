@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: userportal-depl
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: userportalservice
+  template:
+    metadata:
+      labels:
+        app: userportalservice
+    spec:
+      containers:
+        - name: userportalservice
+          image: leventtkaplan/userportalservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: userportal-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: userportalservice
+  ports:
+    - name: userportalservice
+      protocol: TCP
+      port: 80
+      targetPort: 80
